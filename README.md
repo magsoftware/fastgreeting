@@ -31,7 +31,7 @@ pip install -r requirements.txt
 deactivate
 ```
 
-### Install, enabe and start systemd service unit file
+### Install, start and enable systemd service unit file for the application
 ```bash
 cp /home/firmware/fastgreeting/scripts/fastgreeting.service /etc/systemd/system/
 chmod 644 /etc/systemd/system/fastgreeting.service
@@ -45,4 +45,3 @@ systemctl enable fastgreeting
 - https://www.uvicorn.org/deployment/#using-a-process-manager
 - https://fastapi.tiangolo.com/deployment/server-workers/
 - https://docs.gunicorn.org/en/stable/configure.html
-
