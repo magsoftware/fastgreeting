@@ -9,6 +9,7 @@
 
 ### Install python and git
 ```bash
+sudo -i
 yum update -y
 yum install -y python3 git
 python3 -V
@@ -31,8 +32,9 @@ pip install -r requirements.txt
 deactivate
 ```
 
-### Install, start and enable systemd service unit file
+### Install, start and enable systemd service unit file (as root user)
 ```bash
+exit
 cp /home/firmware/fastgreeting/scripts/fastgreeting.service /etc/systemd/system/
 chmod 644 /etc/systemd/system/fastgreeting.service
 systemctl daemon-reload
