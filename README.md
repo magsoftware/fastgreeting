@@ -7,7 +7,7 @@
 
 ## Installation instructions
 
-### Install python 3.x andgit
+### Install python and git
 ```bash
 yum update -y
 yum install -y python3 git
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 deactivate
 ```
 
-### Install, start and enable systemd service unit file for the application
+### Install, start and enable systemd service unit file
 ```bash
 cp /home/firmware/fastgreeting/scripts/fastgreeting.service /etc/systemd/system/
 chmod 644 /etc/systemd/system/fastgreeting.service
