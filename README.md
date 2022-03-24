@@ -1,23 +1,17 @@
 # Deployment of example FastAPI application
 
 ## Assumptions
-1. Operating system: CentOS 7.9
-1. Firmware user: firmware
-1. Application name: fastgreeting
+1. Operating system:   CentOS 7.9
+1. Firmware user name: firmware
+1. Application name:   fastgreeting
 
 ## Installation instructions
 
-### Install python 3
-``bash
-yum update -y
-yum install -y python3
-python3 -V
-```
-
-### Install git
+### Install python 3.x andgit
 ```bash
-install git
-yum install git -y
+yum update -y
+yum install -y python3 git
+python3 -V
 ```
 
 ### Create user for the application runtime
@@ -48,7 +42,7 @@ systemctl enable fastgreeting
 ```
 
 # Resources
-https://www.uvicorn.org/deployment/#using-a-process-manager
-https://fastapi.tiangolo.com/deployment/server-workers/
-https://docs.gunicorn.org/en/stable/configure.html
+- https://www.uvicorn.org/deployment/#using-a-process-manager
+- https://fastapi.tiangolo.com/deployment/server-workers/
+- https://docs.gunicorn.org/en/stable/configure.html
 
