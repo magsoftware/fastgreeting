@@ -3,12 +3,12 @@ Description=Gunicorn instance to serve CubeNG Firmware
 After=network.target
 
 [Service]
-User=fastgreeting
-Group=fastgreeting
-WorkingDirectory=/home/firmware/fastgreetings
-Environment="APPROOT=/home/firmware/fastgreetings"
-Environment="PATH=${APPROOT}/venv/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
-ExecStart=${APPROOT}/venv/bin/gunicorn --config ${APPROOT}/src/gunicorn.py main:ap
+User=firmware
+Group=firmware
+WorkingDirectory=/home/firmware/fastgreeting/src
+Environment="APPROOT=/home/firmware/fastgreeting"
+Environment="PATH=/home/firmware/fastgreeting/venv/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
+ExecStart=/home/firmware/fastgreeting/venv/bin/gunicorn --config /home/firmware/fastgreeting/src/gunicorn.py main:app
 
 [Install]
 WantedBy=multi-user.target
